@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es6", 
+    "module": "esnext",
+    "removeComments": false,
+    "declaration": true,
+    "outDir": "./lib",
+    "declarationDir": "./lib",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "global.d.ts",
+      "typings"
+    ],
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "sourceMap": false,
+    "noImplicitAny": false
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

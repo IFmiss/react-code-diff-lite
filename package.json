@@ -1,0 +1,50 @@
+{
+  "name": "react-hook-code-diff",
+  "version": "1.0.0",
+  "description": "code diff by react",
+  "main": "src/lib/index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config ./webpack.dev.js --progress",
+    "build": "webpack --progress --mode production --config ./webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IFmiss/react-code-diff.git"
+  },
+  "keywords": [
+    "react",
+    "code",
+    "diff"
+  ],
+  "author": "ifmiss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IFmiss/react-code-diff/issues"
+  },
+  "homepage": "https://github.com/IFmiss/react-code-diff#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.0",
+    "less-loader": "^5.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "style-loader": "^1.1.1",
+    "ts-loader": "^6.2.1",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "files": [
+    "src/lib",
+    "README.md"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "diff": "^4.0.1",
+    "diff2html": "^2.12.1",
+    "html-webpack-plugin": "^3.2.0"
+  }
+}
