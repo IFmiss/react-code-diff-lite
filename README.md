@@ -46,8 +46,8 @@ const oldStr = `
 
 ### 实现效果
 #### line-by-line 行内对比
-![](https://github.com/react-code-diff/blob/master/src/inline.png)
+![](https://raw.githubusercontent.com/IFmiss/react-code-diff/master/src/inline.png)
 
 #### 两个窗口对比
 side-by-side
-![](https://github.com/react-code-diff/blob/master/src/outline.png)
+![](https://raw.githubusercontent.com/IFmiss/react-code-diff/master/src/outline.png)
