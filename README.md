@@ -1,8 +1,14 @@
-# react-code-diff
+# react-code-diff-lite
 
 一个基于 diff2html 的diff组件
 
 ### 使用方法
+安装
+```code
+npm install 'react-code-diff-lite'
+```
+
+引入
 ```tsx
 import React from 'react'
 import CodeDiff, {

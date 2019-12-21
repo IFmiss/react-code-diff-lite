@@ -1,7 +1,7 @@
 import React from 'react'
 import CodeDiff, {
   ICodeOutputFormatEnum
-} from 'react-hook-code-diff'
+} from 'react-code-diff-lite'
 
 const newStr = `
 {
