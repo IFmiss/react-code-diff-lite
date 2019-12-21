@@ -4,6 +4,11 @@
 
 ### 使用方法
 ```tsx
+import React from 'react'
+import CodeDiff, {
+  ICodeOutputFormatEnum
+} from 'react-hook-code-diff'
+
 const newStr = `
 {
   a: 1,
@@ -24,19 +29,45 @@ const oldStr = `
 }
 `
 
-<CodeDiff oldStr={oldStr}
-          newStr={newStr}
-          context={10}/>
+
+const Main: React.FC = () => {
+  return (
+    <React.Fragment>
+      <p>修改</p>
+      <div>
+        <CodeDiff oldStr={oldStr} newStr={newStr} context={10}/>
+      </div>
 
 
-<CodeDiff oldStr={oldStr}
-          newStr='' 
-          context={10}/>
+      <p>删除</p>
+      <div>
+        <CodeDiff oldStr={oldStr} newStr='' context={10}/>
+      </div>
 
-<CodeDiff oldStr={oldStr}
-          newStr={newStr}
-          context={10}
-          outputFormat={ICodeOutputFormatEnum.OUTSIDE}/>
+
+      <p>添加</p>
+      <div>
+        <CodeDiff oldStr='' newStr={newStr} context={10}/>
+      </div>
+
+      <p>新增</p>
+      <div>
+        <CodeDiff oldStr='' newStr={newStr} context={10} outputFormat={ICodeOutputFormatEnum.OUTSIDE}/>
+      </div>
+
+      <p>编辑</p>
+      <div>
+        <CodeDiff oldStr={oldStr} newStr={newStr} context={10} outputFormat={ICodeOutputFormatEnum.OUTSIDE}/>
+      </div>
+
+      <p>删除</p>
+      <div>
+        <CodeDiff oldStr={oldStr} newStr='' context={10} outputFormat={ICodeOutputFormatEnum.OUTSIDE}/>
+      </div>
+
+    </React.Fragment>
+  )
+}
 ```
 
 

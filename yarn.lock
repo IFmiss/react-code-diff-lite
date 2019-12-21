@@ -3449,6 +3449,16 @@ react-dom@^16.12.0:
     prop-types "^15.6.2"
     scheduler "^0.18.0"
 
+react-hook-code-diff@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-hook-code-diff/-/react-hook-code-diff-1.0.0.tgz#14320ab43190d1c7130b4ed90d9ec5beecaca6a3"
+  integrity sha512-AX4bjopZ8P6LkITfvZ5PyVj/p9e3XykwE2tBWFFmVo6z7ci6N6DB7Tca2R6Mp0cammCeGDlztwcR0keoqMhvLw==
+  dependencies:
+    "@babel/core" "^7.7.7"
+    diff "^4.0.1"
+    diff2html "^2.12.1"
+    html-webpack-plugin "^3.2.0"
+
 react-is@^16.8.1:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
