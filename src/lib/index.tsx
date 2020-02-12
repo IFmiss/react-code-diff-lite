@@ -33,7 +33,8 @@ const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
 
   const { oldStr, newStr, context, outputFormat} = props
   const html = useMemo(() => {
-    let args = ['', oldStr || '',
+    let args = ['',
+                oldStr || '',
                 newStr || '',
                 '',
                 '',
@@ -45,10 +46,10 @@ const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
                                 matching: 'lines'
                               })
     let html = DiffHtm(outStr, {
-                                  outputFormat: outputFormat,
-                                  drawFileList: false,
-                                  matching: 'lines'
-                                })
+                                outputFormat: outputFormat,
+                                drawFileList: false,
+                                matching: 'lines'
+                              })
     return hljs(html)
   }, [oldStr, newStr])
 
