@@ -1,7 +1,5 @@
 import React from 'react'
-import CodeDiff, {
-  ICodeOutputFormatEnum
-} from 'react-code-diff-lite'
+import CodeDiff from './lib/index'
 
 const newStr = `
 {
@@ -46,17 +44,17 @@ const Main: React.FC = () => {
 
       <p>新增</p>
       <div>
-        <CodeDiff oldStr='' newStr={newStr} context={10} outputFormat={ICodeOutputFormatEnum.OUTSIDE}/>
+        <CodeDiff oldStr='' newStr={newStr} context={10} outputFormat="side-by-side"/>
       </div>
 
       <p>编辑</p>
       <div>
-        <CodeDiff oldStr={oldStr} newStr={newStr} context={10} outputFormat={ICodeOutputFormatEnum.OUTSIDE}/>
+        <CodeDiff oldStr={oldStr} newStr={newStr} context={10} outputFormat="line-by-line"/>
       </div>
 
       <p>删除</p>
       <div>
-        <CodeDiff oldStr={oldStr} newStr='' context={10} outputFormat={ICodeOutputFormatEnum.OUTSIDE}/>
+        <CodeDiff oldStr={oldStr} newStr='' context={10} outputFormat="side-by-side"/>
       </div>
 
     </React.Fragment>

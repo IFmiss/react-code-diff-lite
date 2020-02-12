@@ -24,21 +24,21 @@
   },
   "homepage": "https://github.com/IFmiss/react-code-diff#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.7",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
-    "@babel/core": "^7.7.7",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.0",
+    "html-webpack-plugin": "^3.2.0",
     "less-loader": "^5.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "style-loader": "^1.1.1",
     "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
     "webpack": "^4.41.4",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1",
-    "html-webpack-plugin": "^3.2.0",
-    "typescript": "^3.7.4"
+    "webpack-dev-server": "^3.10.1"
   },
   "files": [
     "src/lib",
@@ -46,6 +46,6 @@
   ],
   "dependencies": {
     "diff": "^4.0.1",
-    "diff2html": "^2.12.1"
+    "diff2html": "^3.1.2"
   }
 }
