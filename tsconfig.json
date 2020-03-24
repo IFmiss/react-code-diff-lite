@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es6", 
+    "target": "es5", 
     "module": "esnext",
     "removeComments": false,
     "declaration": true,
     "outDir": "./lib",
-    "declarationDir": "./lib",
+    "declarationDir": "./dist",
     "moduleResolution": "node",
     "baseUrl": "./",
     "jsx": "react",
@@ -28,5 +28,6 @@
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "files": ["src/lib/index.tsx"]
 }
