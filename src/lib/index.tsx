@@ -1,5 +1,5 @@
 import React, {
-  useMemo
+  useMemo, useState
 } from 'react'
 
 import {
@@ -27,11 +27,12 @@ export interface ICodeDiffProps {
 }
 
 const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
+  const { oldStr, newStr, context, outputFormat} = props
+
   const hljs = (html: string): string => {
     return html.replace(/<span class="d2h-code-line-ctn">(.+?)<\/span>/g, '<span class="d2h-code-line-ctn"><code>$1</code></span>')
   }
 
-  const { oldStr, newStr, context, outputFormat} = props
   const html = useMemo(() => {
     let args = ['',
                 oldStr || '',
@@ -54,7 +55,8 @@ const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
   }, [oldStr, newStr])
 
   return (
-    <div className='react-code-diff' dangerouslySetInnerHTML={{__html: html}}></div>
+    <div className='react-code-diff'
+          dangerouslySetInnerHTML={{__html: html}}></div>
   )
 }
 

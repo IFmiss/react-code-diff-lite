@@ -1,37 +1,32 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'production',
   entry: {
     app: './src/lib/index.tsx',
-  },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: './',
-    filename: 'index.js',
-		libraryTarget: 'umd'
 	},
 	externals: {
     react: {
-			root: 'React',
-			commonjs2: 'react',
-			commonjs: 'react',
-			amd: 'react'
-		},
-		'react-dom': {
-			root: 'ReactDOM',
-			commonjs2: 'react-dom',
-			commonjs: 'react-dom',
-			amd: 'react-dom'
-		},
-		'react-router-dom': {
-			root: 'ReactRouterDOM',
-			commonjs2: 'react-router-dom',
-			commonjs: 'react-router-dom',
-			amd: 'react-router-dom'
-		}
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'react',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom',
+      root: 'ReactDOM',
+    },
+  },
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: './',
+    filename: 'index.js',
+		libraryTarget: 'umd'
 	},
 	plugins: [
     // 清除
@@ -39,6 +34,7 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'dist')
 		}),
 
+		// new WebpackBundleAnalyzer({})
 	],
   module: {
     rules: [
@@ -91,9 +87,8 @@ module.exports = {
 	},
   resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx'],
-		alias: {
-			react: path.resolve(__dirname, './node_modules/react'),
-      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+		alias:{
+			react: path.resolve('./node_modules/react')
 		}
   },
   optimization: {

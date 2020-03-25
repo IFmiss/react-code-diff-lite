@@ -12,7 +12,6 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "downlevelIteration": true,
-    "allowJs": true,
     "skipLibCheck": true,
     "typeRoots": [
       "node_modules/@types",
