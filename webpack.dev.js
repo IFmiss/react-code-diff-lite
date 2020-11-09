@@ -1,8 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const resolve = function (dir) {
-	return path.resolve(__dirname, dir);
-}
 
 const BUILD_DIR = path.resolve(__dirname, "./build/");
 
@@ -75,6 +72,10 @@ module.exports = {
 			}
 		})
 	],
+
+	devServer: {
+		port: 1800,
+	},
 
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx']

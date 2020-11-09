@@ -2,6 +2,8 @@
 
 一个基于 diff2html 的diff组件
 
+# demo
+
 ### 使用方法
 安装
 ```code
@@ -13,26 +15,21 @@ npm install 'react-code-diff-lite'
 import React from 'react'
 import CodeDiff from 'react-code-diff-lite'
 
-const newStr = `
-{
+const newStr = `{
   a: 1,
   b: 2,
   c: () => {
     return this.a
   }
-}
-`
+}`
 
-const oldStr = `
-{
+const oldStr = `{
   a: 1,
   b: 2,
   getValue: () => {
     return this.b
   }
-}
-`
-
+}`
 
 const Main: React.FC = () => {
   return (
@@ -42,12 +39,10 @@ const Main: React.FC = () => {
         <CodeDiff oldStr={oldStr} newStr={newStr} context={10}/>
       </div>
 
-
       <p>删除</p>
       <div>
         <CodeDiff oldStr={oldStr} newStr='' context={10}/>
       </div>
-
 
       <p>添加</p>
       <div>
@@ -68,7 +63,6 @@ const Main: React.FC = () => {
       <div>
         <CodeDiff oldStr={oldStr} newStr='' context={10} outputFormat="side-by-side"/>
       </div>
-
     </React.Fragment>
   )
 }
@@ -76,7 +70,6 @@ const Main: React.FC = () => {
 
 
 代码来自于 [react-code-diff](https://github.com/guhuaijin/react-code-diff)
-
 引入他的npm包并不能使用，在他的基础上用hooks实现
 
 ### 组件属性如下：
