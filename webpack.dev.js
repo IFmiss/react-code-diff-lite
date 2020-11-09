@@ -8,7 +8,7 @@ module.exports = {
 	entry: ['./src/index.tsx'],
 	output : {
 		path : BUILD_DIR,
-		publicPath: '/diff',
+		publicPath: '/diff/',
 		filename : "[name] bundle.js",
 	},
   
