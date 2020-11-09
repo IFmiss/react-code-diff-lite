@@ -75,6 +75,7 @@ module.exports = {
 
 	devServer: {
 		port: 1800,
+		host: '127.0.0.1'
 	},
 
 	resolve: {
