@@ -5,9 +5,10 @@ const BUILD_DIR = path.resolve(__dirname, "./build/");
 
 module.exports = {
 	mode: 'development',
-	entry: './src/index.tsx',
+	entry: ['./src/index.tsx'],
 	output : {
 		path : BUILD_DIR,
+		publicPath: '/diff',
 		filename : "[name] bundle.js",
 	},
   
