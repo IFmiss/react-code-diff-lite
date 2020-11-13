@@ -2,7 +2,7 @@
 
 一个基于 diff2html 的diff组件
 
-# demo
+# demo  https://www.daiwei.site/diff
 
 ### 使用方法
 安装
