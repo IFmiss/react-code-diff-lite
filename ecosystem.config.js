@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'react-code-diff',
       script: 'npm',
-      args: 'run dev'
+      args: 'run demo'
     }
   ],
 }

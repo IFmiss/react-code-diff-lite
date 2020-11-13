@@ -8,7 +8,7 @@ module.exports = {
 	entry: ['./src/index.tsx'],
 	output : {
 		path : BUILD_DIR,
-		publicPath: '/diff/',
+		publicPath: '/',
 		filename : "[name] bundle.js",
 	},
   
@@ -76,7 +76,7 @@ module.exports = {
 
 	devServer: {
 		port: 1800,
-		host: '127.0.0.1'
+		host: '0.0.0.0'
 	},
 
 	resolve: {
