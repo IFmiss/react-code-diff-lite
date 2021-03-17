@@ -1368,25 +1368,25 @@ detect-node@^2.0.4:
   resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
   integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
 
-diff2html@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/diff2html/-/diff2html-3.1.2.tgz#a9607784e6b7fd0cf1aaac7d5ba8c2a010589669"
-  integrity sha512-yn4SXS6Em3Ml9ejsj8cWBcjWwSFOFwOd4Qd3U7pJHpyM3agY2lU+gxU2WedLxAgCMXffsublB96gG26efheCxQ==
+diff2html@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.npm.taobao.org/diff2html/download/diff2html-3.4.0.tgz#71061552c4455c1e2020938807ac51aca09fd549"
+  integrity sha1-cQYVUsRFXB4gIJOIB6xRrKCf1Uk=
   dependencies:
     diff "4.0.2"
     hogan.js "3.0.2"
   optionalDependencies:
-    highlight.js "9.18.1"
+    highlight.js "10.4.1"
 
 diff@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
-diff@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.1.tgz#0c667cb467ebbb5cea7f14f135cc2dba7780a8ff"
-  integrity sha512-s2+XdvhPCOF01LRQBC8hf4vhbVmI2CGS5aZnxLJlT5FtdhPCDFq80q++zK2KlrVorVDdL5BOGZ/VfLrVtYNF+Q==
+diff@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/diff/download/diff-5.0.0.tgz?cache=0&sync_timestamp=1604803633979&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdiff%2Fdownload%2Fdiff-5.0.0.tgz#7ed6ad76d859d030787ec35855f5b1daf31d852b"
+  integrity sha1-ftatdthZ0DB4fsNYVfWx2vMdhSs=
 
 diffie-hellman@^5.0.0:
   version "5.0.3"
@@ -2135,10 +2135,10 @@ he@1.2.x:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-highlight.js@9.18.1:
-  version "9.18.1"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
-  integrity sha512-OrVKYz70LHsnCgmbXctv/bfuvntIKDz177h0Co37DQ5jamGZLVmoCVMtjMtNZY3X9DrCcKfklHPNeA0uPZhSJg==
+highlight.js@10.4.1:
+  version "10.4.1"
+  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-10.4.1.tgz#d48fbcf4a9971c4361b3f95f302747afe19dbad0"
+  integrity sha1-1I+89KmXHENhs/lfMCdHr+GdutA=
 
 hmac-drbg@^1.0.0:
   version "1.0.1"

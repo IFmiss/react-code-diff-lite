@@ -46,7 +46,7 @@ const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
                 '',
                 '',
                 {context: context}];
-                
+
     const dd = createPatch(...args);
 
     const outStr = DiffParse(dd, {
