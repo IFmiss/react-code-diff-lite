@@ -7,13 +7,15 @@ import {
 } from 'diff';
 
 import {
+  Diff2HtmlConfig,
   html as DiffHtm,
   parse as DiffParse
 } from 'diff2html';
 
 import PropTypes from 'prop-types';
 
-import 'diff2html/bundles/css/diff2html.min.css';
+// import 'diff2html/bundles/css/diff2html.min.css';
+import './dark.less';
 
 /**
  * 行内对比  =>  'line-by-line'
@@ -21,15 +23,14 @@ import 'diff2html/bundles/css/diff2html.min.css';
  */
 export type ICodeOutputFormatType = 'line-by-line' | 'side-by-side';
 
-export interface ICodeDiffProps {
+export interface ICodeDiffProps extends Diff2HtmlConfig {
   oldStr: string;
   newStr: string;
   context?: number;
-  outputFormat?: ICodeOutputFormatType;
 }
 
 const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
-  const { oldStr, newStr, context, outputFormat} = props
+  const { oldStr, newStr, context, ...diff2HtmlConfig } = props
 
   const hljs = (html: string): string => {
     return html
@@ -50,13 +51,13 @@ const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
     const dd = createPatch(...args);
 
     const outStr = DiffParse(dd, {
-      outputFormat: outputFormat,
+      ...diff2HtmlConfig,
       drawFileList: false,
       matching: 'lines'
     });
 
     const html = DiffHtm(outStr, {
-      outputFormat: outputFormat,
+      ...diff2HtmlConfig,
       drawFileList: false,
       matching: 'lines'
     })

@@ -1,0 +1,492 @@
+/*
+ *
+ * Diff to HTML (diff2html.css)
+ * Author: rtfpessoa
+ *
+ */
+
+:root {
+  --main-c: #4a4a4a;
+  --full-content-b: #fff;
+  --main-container-b: #ddd;
+
+  // 选择折叠框
+  --collapse-b: #ddd;
+  --collapse-bg: #c8e1ff;
+
+  --haeder-bg: #f7f7f7;
+  --header-broder-bt: #d8d8d8;
+  --line-add-b: #b4e2b4;
+  --line-add-c: #399839;
+  --line-delete-b: #e9aeae;
+  --line-delete-c: #c33;
+
+  --line-sider-del-content-bg: #ffb6ba;
+  --line-sider-ins-content-bg: #97f295;
+
+  --left-code-line-bg: #fff;
+  --left-code-line-c: rgba(0, 0, 0, 0.3);
+  --left-code-line-b: #eee;
+
+  --empty-emptyplaceholder-bg: #f1f1f1;
+  --empty-emptyplaceholder-b: #e1e1e1;
+
+  // 删除的行的信息
+  --del-full-line-bg: #fee8e9;
+  --del-full-line-b: #e9aeae;
+
+  // 新增行的信息
+  --ins-full-line-bg: #dfd;
+  --ins-full-line-b: #b4e2b4;
+
+  // 提示信息
+  --info-full-line-bg: #f8fafd;
+  --info-full-line-c: rgba(0, 0, 0, 0.3);;
+  --info-full-line-b: #b4e2b4;
+
+  --del-change-bg: #fdf2d0;
+  --ins-change-bg: #ded;
+
+  --text-a: #3572b0;
+
+  --li-bt: #ddd;
+
+  --del-tag-c: #c33;
+  --ins-tag-c: 399839;
+  --change-tag-c: #d0b44c;
+  --move-tag-c: #3572b0;
+  --tag-bg: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-c: #f0f0f0;
+    --full-content-b: rgb(14, 17, 22);
+    --main-container-b: rgb(48, 54, 61);
+
+    // 选择折叠框
+    --collapse-b: #ddd;
+    --collapse-bg: #c8e1ff;
+
+    --haeder-bg: rgb(14, 18, 32);
+    --header-broder-bt: rgb(48, 54, 61);
+
+    --line-add-b: #b4e2b4;
+    --line-add-c: #399839;
+    --line-delete-b: #e9aeae;
+    --line-delete-c: #c33;
+
+    --line-sider-del-content-bg: #8f1c22;
+    --line-sider-ins-content-bg: #238321;
+
+    --left-code-line-bg: rgb(48, 54, 61);
+    --left-code-line-c: rgba(240, 246, 252, 0.3);
+    --left-code-line-b: #111;
+
+    --empty-emptyplaceholder-bg: rgb(14, 18, 32);
+    --empty-emptyplaceholder-b: rgb(48, 54, 61);
+
+    // 删除的行的信息
+    --del-full-line-bg: rgba(218, 54, 51, 0.1);
+    --del-full-line-b: #833f3f;
+
+    // 新增行的信息
+    --ins-full-line-bg: rgba(46, 160, 67, 0.1);
+    --ins-full-line-b: #5a8f5a;
+
+    // 提示注视信息
+    --info-full-line-bg: rgba(88, 166, 255, 0.1);
+    --info-full-line-c: rgb(139, 148, 158);
+    --info-full-line-b: rgb(139, 148, 158);
+
+    --del-change-bg: rgba(243, 205, 89, 0.1);
+    --ins-change-bg: rgba(138, 230, 138, 0.1);
+
+    --text-a: #234a70;
+
+    --li-bt: #ddd;
+
+    --del-tag-c: rgb(109, 28, 28);
+    --ins-tag-c: #1a491a;
+    --change-tag-c: #7a6a2d;
+    --move-tag-c: #1a3958;
+    --tag-bg: rgb(48, 54, 61);
+  }
+}
+
+.d2h-d-none {
+  display: none;
+}
+
+.d2h-wrapper {
+  color: var(--main-c);
+  background: var(--full-content-b);
+  text-align: left;
+}
+
+.d2h-file-header {
+  display: flex;
+  height: 35px;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--header-broder-bt);
+  background-color: var(--haeder-bg);
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.d2h-file-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.d2h-lines-added {
+  text-align: right;
+  border: 1px solid var(--line-add-b);
+  border-radius: 5px 0 0 5px;
+  color: var(--line-add-c);
+  padding: 2px;
+  vertical-align: middle;
+}
+
+.d2h-lines-deleted {
+  text-align: left;
+  border: 1px solid var(--line-delete-b);
+  border-radius: 0 5px 5px 0;
+  color: var(--line-delete-c);
+  padding: 2px;
+  vertical-align: middle;
+  margin-left: 1px;
+}
+
+.d2h-file-name-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  font-size: 15px;
+}
+
+.d2h-file-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.d2h-file-wrapper {
+  border: 1px solid var(--main-container-b);
+  border-radius: 3px;
+  margin-bottom: 1em;
+}
+
+.d2h-file-collapse {
+  justify-content: flex-end;
+  display: none;
+  cursor: pointer;
+  font-size: 12px;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid var(--collapse-b);
+  padding: 4px 8px;
+}
+
+.d2h-file-collapse.d2h-selected {
+  background-color: var(--collapse-bg);
+}
+
+.d2h-file-collapse-input {
+  margin: 0 4px 0 0;
+}
+
+.d2h-diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 13px;
+}
+
+.d2h-files-diff {
+  display: block;
+  width: 100%;
+}
+
+.d2h-file-diff {
+  overflow-y: hidden;
+}
+
+.d2h-file-side-diff {
+  display: inline-block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 50%;
+  margin-right: -4px;
+  margin-bottom: -8px;
+}
+
+.d2h-code-line {
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  width: 100%;
+  /* Compensate for the absolute positioning of the line numbers */
+  padding: 0 8em;
+}
+
+.d2h-code-side-line {
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  width: 100%;
+  /* Compensate for the absolute positioning of the line numbers */
+  padding: 0 4.5em;
+}
+
+.d2h-code-line-ctn {
+  display: inline-block;
+  background: none;
+  padding: 0;
+  word-wrap: normal;
+  white-space: pre;
+  user-select: text;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.d2h-code-line del,
+.d2h-code-side-line del {
+  display: inline-block;
+  margin-top: -1px;
+  text-decoration: none;
+  background-color: var(--line-sider-del-content-bg);
+  border-radius: 0.2em;
+  vertical-align: middle;
+}
+
+.d2h-code-line ins,
+.d2h-code-side-line ins {
+  display: inline-block;
+  margin-top: -1px;
+  text-decoration: none;
+  background-color: var(--line-sider-ins-content-bg);
+  border-radius: 0.2em;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.d2h-code-line-prefix {
+  display: inline;
+  background: none;
+  padding: 0;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.line-num1 {
+  box-sizing: border-box;
+  float: left;
+  width: 3.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.line-num2 {
+  box-sizing: border-box;
+  float: right;
+  width: 3.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.d2h-code-linenumber {
+  box-sizing: border-box;
+  width: 7.5em;
+  /* Keep the numbers fixed on line contents scroll */
+  position: absolute;
+  display: inline-block;
+  background-color: var(--left-code-line-bg);
+  color: var(--left-code-line-c);
+  text-align: right;
+  border: solid var(--left-code-line-b);
+  border-width: 0 1px 0 1px;
+  cursor: pointer;
+}
+
+.d2h-code-linenumber:after {
+  content: '\200b';
+}
+
+.d2h-code-side-linenumber {
+  /* Keep the numbers fixed on line contents scroll */
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 4em;
+  background-color: var(--left-code-line-bg);
+  color: var(--left-code-line-c);
+  text-align: right;
+  border: solid var(--left-code-line-b);
+  border-width: 0 1px 0 1px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.d2h-code-side-linenumber:after {
+  content: '\200b';
+}
+
+.d2h-code-side-emptyplaceholder,
+.d2h-emptyplaceholder {
+  background-color: var(--empty-emptyplaceholder-bg);
+  border-color: var(--empty-emptyplaceholder-b);
+}
+
+.d2h-code-linenumber,
+.d2h-code-side-linenumber,
+.d2h-code-line-prefix,
+.d2h-emptyplaceholder {
+  user-select: none;
+}
+
+.d2h-code-linenumber,
+.d2h-code-side-linenumber {
+  direction: rtl;
+}
+
+/*
+ * Changes Highlight
+ */
+
+.d2h-del {
+  background-color: var(--del-full-line-bg);
+  border-color: var(--del-full-line-b);
+}
+
+.d2h-ins {
+  background-color: var(--ins-full-line-bg);
+  border-color: var(--ins-full-line-b);
+}
+
+.d2h-info {
+  background-color: var(--info-full-line-bg);
+  color: var(--info-full-line-c);
+  border-color: var(--info-full-line-b);
+}
+
+.d2h-file-diff .d2h-del.d2h-change {
+  background-color: var(--del-change-bg);
+}
+
+.d2h-file-diff .d2h-ins.d2h-change {
+  background-color: var(--ins-change-bg);
+}
+
+/*
+ * File Summary List
+ */
+
+.d2h-file-list-wrapper {
+  margin-bottom: 10px;
+}
+
+.d2h-file-list-wrapper a {
+  text-decoration: none;
+  color: var(--text-a);
+}
+
+.d2h-file-list-wrapper a:visited {
+  color: var(--text-a);
+}
+
+.d2h-file-list-header {
+  text-align: left;
+}
+
+.d2h-file-list-title {
+  font-weight: bold;
+}
+
+.d2h-file-list-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.d2h-file-list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.d2h-file-list > li {
+  border-bottom: var(--li-bt) solid 1px;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+.d2h-file-list > li:last-child {
+  border-bottom: none;
+}
+
+.d2h-file-switch {
+  display: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.d2h-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.d2h-deleted {
+  color: var(--del-tag-c);
+}
+
+.d2h-added {
+  color: var(--ins-tag-c);
+}
+
+.d2h-changed {
+  color: var(--change-tag-c);
+}
+
+.d2h-moved {
+  color: var(--move-tag-c);
+}
+
+.d2h-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  margin-left: 5px;
+  padding: 0 2px;
+  background-color: var(--tag-bg);
+}
+
+.d2h-deleted-tag {
+  border: var(--del-tag-c) 1px solid;
+}
+
+.d2h-added-tag {
+  border: var(--ins-tag-c) 1px solid;
+}
+
+.d2h-changed-tag {
+  border: var(--change-tag-c) 1px solid;
+}
+
+.d2h-moved-tag {
+  border: var(--move-tag-c) 1px solid;
+}

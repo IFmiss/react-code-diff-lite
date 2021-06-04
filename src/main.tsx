@@ -1,5 +1,6 @@
 import React from 'react'
 import CodeDiff from './lib/index'
+import './index.less';
 
 const newStr = `{
   a: 1,
