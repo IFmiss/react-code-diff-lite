@@ -14,8 +14,7 @@ import {
 
 import PropTypes from 'prop-types';
 
-// import 'diff2html/bundles/css/diff2html.min.css';
-import './dark.less';
+import './style.less';
 
 /**
  * 行内对比  =>  'line-by-line'

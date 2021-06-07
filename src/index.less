@@ -1,3 +1,64 @@
+:root {
+  --demo-bg: #fff;
+  --demo-c: #010101;
+  --t-green: #26a65b;
+  --t-dark: #353535;
+  --t-red: #cb2c37;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --demo-bg: #111;
+    --demo-c: #fff;
+
+    --t-green: #188043;
+    --t-dark: #242323;
+    --t-red: #962129;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home-page{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  a {
+    color: var(--demo-c);
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+    span {
+      font-size: 40px;
+      &:nth-child(1) {
+        padding-left: 10px;
+        color: var(--t-green);
+      }
+      &:nth-child(2) {
+        color: var(--t-dark);
+      }
+      &:nth-child(3) {
+        padding-right: 10px;
+        color: var(--t-red);
+      }
+    }
+  }
+}
+
 .code-diff {
-  background: red;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: var(--demo-c);
+  background-color: var(--demo-bg);
+  padding: 20px;
 }

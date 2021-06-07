@@ -20,7 +20,13 @@ const oldStr = `{
 
 const Main: React.FC = () => {
   return (
-    <React.Fragment>
+    <div className={'code-diff'}>
+      <div className={'home-page'}>
+        <h3>基于 <a href={"https://diff2html.xyz/index.html"}><span>diff</span><span>2</span><span>html</span></a> 的React diff 组件</h3>
+        <p>支持 diff2html 全部api | 支持系统夜间模式🌛</p>
+        <p><a href="https://github.com/IFmiss/react-code-diff-lite">github</a></p>
+      </div>
+
       <p>修改</p>
       <div>
         <CodeDiff oldStr={oldStr} newStr={newStr} context={10}/>
@@ -50,7 +56,7 @@ const Main: React.FC = () => {
       <div>
         <CodeDiff oldStr={oldStr} newStr='' context={10} outputFormat="side-by-side"/>
       </div>
-    </React.Fragment>
+    </div>
   )
 }
 
