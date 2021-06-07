@@ -16,20 +16,22 @@ import PropTypes from 'prop-types';
 
 import './style.less';
 
-/**
- * 行内对比  =>  'line-by-line'
- * 新增窗口 两个窗口对比  =>  'side-by-side'
- */
-export type ICodeOutputFormatType = 'line-by-line' | 'side-by-side';
+export type ThemeType = 'light' | 'dark' | 'auto';
 
 export interface ICodeDiffProps extends Diff2HtmlConfig {
-  oldStr: string;
-  newStr: string;
+  oldStr?: string;
+  newStr?: string;
   context?: number;
+  theme?: ThemeType;
 }
 
-const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
-  const { oldStr, newStr, context, ...diff2HtmlConfig } = props
+const CodeDiff: React.FC<ICodeDiffProps> = ({
+  oldStr = '',
+  newStr = '',
+  context,
+  theme = 'auto',
+  ...diff2HtmlConfig
+}) => {
 
   const hljs = (html: string): string => {
     return html
@@ -64,7 +66,7 @@ const CodeDiff: React.FC<ICodeDiffProps> = (props) => {
   }, [oldStr, newStr])
 
   return (
-    <div className='react-code-diff'
+    <div className={`react-code-diff-lite ${theme}`}
       dangerouslySetInnerHTML={{__html: html}}></div>
   )
 }
@@ -77,8 +79,8 @@ CodeDiff.defaultProps = {
 }
 
 CodeDiff.propTypes = {
-  oldStr: PropTypes.string.isRequired,
-  newStr: PropTypes.string.isRequired,
+  oldStr: PropTypes.string,
+  newStr: PropTypes.string,
   context: PropTypes.number,
   outputFormat: PropTypes.oneOf([
     'line-by-line',

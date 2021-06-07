@@ -5,12 +5,12 @@
  *
  */
 
-:root {
+.react-code-diff-lite {
   --main-c: #4a4a4a;
   --full-content-b: #fff;
   --main-container-b: #ddd;
 
-  // 选择折叠框
+  /* 选择折叠框 */
   --collapse-b: #ddd;
   --collapse-bg: #c8e1ff;
 
@@ -31,15 +31,15 @@
   --empty-emptyplaceholder-bg: #f1f1f1;
   --empty-emptyplaceholder-b: #e1e1e1;
 
-  // 删除的行的信息
+  /* 删除的行的信息 */
   --del-full-line-bg: #fee8e9;
   --del-full-line-b: #e9aeae;
 
-  // 新增行的信息
+  /* 新增行的信息 */
   --ins-full-line-bg: #dfd;
   --ins-full-line-b: #b4e2b4;
 
-  // 提示信息
+  /* 提示信息 */
   --info-full-line-bg: #f8fafd;
   --info-full-line-c: rgba(0, 0, 0, 0.3);;
   --info-full-line-b: #b4e2b4;
@@ -59,12 +59,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  .react-code-diff-lite:not(.light) {
     --main-c: #f0f0f0;
     --full-content-b: rgb(14, 17, 22);
     --main-container-b: rgb(48, 54, 61);
 
-    // 选择折叠框
+    /* 选择折叠框 */
     --collapse-b: #ddd;
     --collapse-bg: #c8e1ff;
 
@@ -86,15 +86,15 @@
     --empty-emptyplaceholder-bg: rgb(14, 18, 32);
     --empty-emptyplaceholder-b: rgb(48, 54, 61);
 
-    // 删除的行的信息
+    /* 删除的行的信息 */
     --del-full-line-bg: rgba(218, 54, 51, 0.1);
     --del-full-line-b: #833f3f;
 
-    // 新增行的信息
+    /* 新增行的信息 */
     --ins-full-line-bg: rgba(46, 160, 67, 0.1);
     --ins-full-line-b: #5a8f5a;
 
-    // 提示注视信息
+    /* 提示注视信息 */
     --info-full-line-bg: rgba(88, 166, 255, 0.1);
     --info-full-line-c: rgb(139, 148, 158);
     --info-full-line-b: rgb(139, 148, 158);
@@ -112,6 +112,60 @@
     --move-tag-c: #1a3958;
     --tag-bg: rgb(48, 54, 61);
   }
+}
+
+.react-code-diff-lite.dark {
+  --main-c: #f0f0f0;
+  --full-content-b: rgb(14, 17, 22);
+  --main-container-b: rgb(48, 54, 61);
+
+  /* 选择折叠框 */
+  --collapse-b: #ddd;
+  --collapse-bg: #c8e1ff;
+
+  --haeder-bg: rgb(14, 18, 32);
+  --header-broder-bt: rgb(48, 54, 61);
+
+  --line-add-b: #b4e2b4;
+  --line-add-c: #399839;
+  --line-delete-b: #e9aeae;
+  --line-delete-c: #c33;
+
+  --line-sider-del-content-bg: #8f1c22;
+  --line-sider-ins-content-bg: #238321;
+
+  --left-code-line-bg: rgb(48, 54, 61);
+  --left-code-line-c: rgba(240, 246, 252, 0.3);
+  --left-code-line-b: #111;
+
+  --empty-emptyplaceholder-bg: rgb(14, 18, 32);
+  --empty-emptyplaceholder-b: rgb(48, 54, 61);
+
+  /* 删除的行的信息 */
+  --del-full-line-bg: rgba(218, 54, 51, 0.1);
+  --del-full-line-b: #833f3f;
+
+  /* 新增行的信息 */
+  --ins-full-line-bg: rgba(46, 160, 67, 0.1);
+  --ins-full-line-b: #5a8f5a;
+
+  /* 提示注视信息 */
+  --info-full-line-bg: rgba(88, 166, 255, 0.1);
+  --info-full-line-c: rgb(139, 148, 158);
+  --info-full-line-b: rgb(139, 148, 158);
+
+  --del-change-bg: rgba(243, 205, 89, 0.1);
+  --ins-change-bg: rgba(138, 230, 138, 0.1);
+
+  --text-a: #234a70;
+
+  --li-bt: #ddd;
+
+  --del-tag-c: rgb(109, 28, 28);
+  --ins-tag-c: #1a491a;
+  --change-tag-c: #7a6a2d;
+  --move-tag-c: #1a3958;
+  --tag-bg: rgb(48, 54, 61);
 }
 
 .d2h-d-none {

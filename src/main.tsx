@@ -29,7 +29,7 @@ const Main: React.FC = () => {
 
       <p>修改</p>
       <div>
-        <CodeDiff oldStr={oldStr} newStr={newStr} context={10}/>
+        <CodeDiff theme='auto' oldStr={oldStr} newStr={newStr} context={10}/>
       </div>
 
       <p>删除</p>

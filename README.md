@@ -92,6 +92,8 @@ const Main: React.FC = () => {
 - `newStr`: 新代码
 - `context`: 代码对比范围，默认为 0 也就是只显示改动的地方，如果为 10 就是除改动地方之外多显示上下 10 行代码
 - `outputFormat`: 展示方式行内对比和两个窗口对比 'line-by-line' | 'side-by-side'
+- `theme`: 主题色 支持自动跟随系统色的方式 'auto', 或者手动设置 'light' | 'dark', 默认'auto'
+- 其他属性可参考 https://github.com/rtfpessoa/diff2html#diff2html-configuration
 
 ### 实现效果
 
