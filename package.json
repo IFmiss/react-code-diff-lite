@@ -1,6 +1,6 @@
 {
   "name": "react-code-diff-lite",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "code diff by react hook",
   "main": "dist/index.js",
   "scripts": {

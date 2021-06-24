@@ -105,3 +105,6 @@ const Main: React.FC = () => {
 
 side-by-side
 ![](https://raw.githubusercontent.com/IFmiss/react-code-diff/master/src/outline.png)
+
+#### 夜间模式效果
+![](https://raw.githubusercontent.com/IFmiss/react-code-diff/master/src/dark-mode.png)
