@@ -63,7 +63,7 @@ const CodeDiff: React.FC<ICodeDiffProps> = ({
       matching: 'lines'
     })
     return hljs(html)
-  }, [oldStr, newStr])
+  }, [oldStr, newStr, context, diff2HtmlConfig])
 
   return (
     <div className={`react-code-diff-lite ${theme}`}
