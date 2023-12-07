@@ -2,7 +2,7 @@
 
 一个基于 diff2html 的 React diff 组件
 
-# demo https://www.daiwei.site/diff
+# demo https://react-code-diff-lite-ifmiss.vercel.app/
 
 ### 使用方法
 

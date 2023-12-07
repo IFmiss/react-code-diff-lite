@@ -11,7 +11,7 @@ module.exports = {
 	},
   output: {
     path: path.resolve(__dirname, './demo'),
-    publicPath: '/pr/react-code-diff-lite/demo/',
+    publicPath: '/',
     filename: 'index.js',
 		libraryTarget: 'umd'
 	},
